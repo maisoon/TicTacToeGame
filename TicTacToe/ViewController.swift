@@ -13,6 +13,9 @@ class ViewController: UIViewController {
     let xImage = UIImage(named: "tic-tac-toe-X.png") as UIImage!
     let oImage = UIImage(named: "tic-tac-toe-O.png") as UIImage!
     let whiteImage = UIImage(named: "empty.png") as UIImage!
+    let leftPointer = UIImage(named: "leftPointer.jpeg") as UIImage!
+    let rightPointer = UIImage(named: "rightPointer.jpg") as UIImage!
+    
     //let nilImage = UIImage(CGImage: nil)!
     
     var turn = true
@@ -69,6 +72,11 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var secondPlayerScoreLabel: UILabel!
     
+    @IBOutlet weak var rightPointerImage: UIImageView!
+    
+    @IBOutlet weak var leftPointerImage: UIImageView!
+    
+    @IBOutlet weak var youWonLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -77,12 +85,31 @@ class ViewController: UIViewController {
         firstPlayerImage.image = UIImage(named: "tic-tac-toe-X.png")
         
         secondPlayerImage.image = UIImage(named: "tic-tac-toe-O.png")
+        
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func changePointer()
+    {
+        if (turn == true)
+        {
+            rightPointerImage.hidden = false
+            leftPointerImage.hidden = true
+        }
+        else
+        {
+            leftPointerImage.hidden = false
+            rightPointerImage.hidden = true
+        }
+    
+    }
+    
     
     func resetingTiles()
     {
@@ -152,7 +179,7 @@ class ViewController: UIViewController {
             turn = true
             someoneWon = 1
            
-            
+            youWonLabel.text = "X Won"
             
           
         }
@@ -175,7 +202,7 @@ class ViewController: UIViewController {
             //change the turn to the component
             turn = false
             someoneWon = 1
-            
+             youWonLabel.text = "O Won"
             
         }
     //second row all X
@@ -199,6 +226,8 @@ class ViewController: UIViewController {
             turn = true
             someoneWon = 1
             
+            youWonLabel.text = "X Won"
+
             
         }
         //second row all 0
@@ -219,7 +248,7 @@ class ViewController: UIViewController {
             //change the turn to the component
             turn = false
             someoneWon = 1
-           
+            youWonLabel.text = "O Won"
             
         }
         
@@ -244,7 +273,9 @@ class ViewController: UIViewController {
             turn = true
             someoneWon = 1
             
-         
+            
+            youWonLabel.text = "X Won"
+
             
         }
         //third row all O
@@ -266,7 +297,7 @@ class ViewController: UIViewController {
             //change the turn to the component
             turn = false
             someoneWon = 1
-           
+            youWonLabel.text = "O Won"
             
         }
         
@@ -291,7 +322,9 @@ class ViewController: UIViewController {
             turn = true
             someoneWon = 1
             
-         
+            
+            youWonLabel.text = "X Won"
+
             
         }
 
@@ -313,7 +346,7 @@ class ViewController: UIViewController {
             //change the turn to the component
             turn = false
             someoneWon = 1
-           
+            youWonLabel.text = "O Won"
             
         }
         
@@ -339,6 +372,9 @@ class ViewController: UIViewController {
             someoneWon = 1
           
             
+            youWonLabel.text = "X Won"
+
+            
         }
         //second column all O
         if (secondValue == 2 && fifthValue == 2 && eighthValue == 2)
@@ -358,7 +394,7 @@ class ViewController: UIViewController {
             //change the turn to the component
             turn = false
             someoneWon = 1
-         
+          youWonLabel.text = "O Won"
             
         }
     //third column all X
@@ -382,6 +418,8 @@ class ViewController: UIViewController {
             someoneWon = 1
          
             
+            youWonLabel.text = "X Won"
+
         }
         //third column all O
         if (thirdValue == 2 && sixthValue == 2 && ninthValue == 2)
@@ -403,7 +441,7 @@ class ViewController: UIViewController {
             //change the turn to the component
             turn = false
             someoneWon = 1
-           
+            youWonLabel.text = "O Won"
             
         }
 
@@ -427,6 +465,8 @@ class ViewController: UIViewController {
             someoneWon = 1
         
             
+            youWonLabel.text = "X Won"
+
         }
         //backward slash all O
         if (firstValue == 2 && fifthValue == 2 && ninthValue == 2)
@@ -446,7 +486,7 @@ class ViewController: UIViewController {
             //change the turn to the component
             turn = false
             someoneWon = 1
-         
+          youWonLabel.text = "O Won"
             
         }
 
@@ -469,7 +509,9 @@ class ViewController: UIViewController {
             //change the turn to the component
             turn = true
             someoneWon = 1
-           
+            
+            youWonLabel.text = "X Won"
+
             
         }
         //forward slash all O
@@ -491,6 +533,8 @@ class ViewController: UIViewController {
             someoneWon = 1
           
             
+            youWonLabel.text = "O Won"
+
         }
 
         if(firstIsFull == true && secondIsFull == true && thirdIsFull == true && fourthIsFull == true && fifthIsFull == true && sixthIsFull == true && seventhIsFull == true && eighthIsFull == true && ninthIsFull == true && someoneWon == 0)
@@ -513,6 +557,8 @@ class ViewController: UIViewController {
 
             
         }
+        changePointer()
+        
 
     
     }
@@ -539,6 +585,7 @@ class ViewController: UIViewController {
         firstIsFull = true
             
             calculateWinner()
+         
         }
     }
     
@@ -563,6 +610,7 @@ class ViewController: UIViewController {
         turn = negateTurn
     secondIsFull = true
             calculateWinner()
+            
             
         }
     }
@@ -589,6 +637,7 @@ class ViewController: UIViewController {
         turn = negateTurn
         thirdIsFull = true
             calculateWinner()
+            
     
         }
     }
@@ -737,11 +786,8 @@ class ViewController: UIViewController {
             calculateWinner()
         }
     }
-    
-    @IBAction func resetButtonPressed(sender: AnyObject) {
-        resetingTiles()
-        resetButtonOutlet.hidden = true
-       // firstSquareOutlet.setImage(, forState: .Normal)
+    func emptyTiles()
+    {
         firstSquareOutlet.setImage(whiteImage, forState: .Normal)
         secondSquareOutlet.setImage(whiteImage, forState: .Normal)
         thirdSquareOutlet.setImage(whiteImage, forState: .Normal)
@@ -752,13 +798,31 @@ class ViewController: UIViewController {
         eigthSquareOutlet.setImage(whiteImage, forState: .Normal)
         ninthSquareOutlet.setImage(whiteImage, forState: .Normal)
         
+
+    }
+    @IBAction func resetButtonPressed(sender: AnyObject) {
+        resetingTiles()
+        resetButtonOutlet.hidden = true
+       // firstSquareOutlet.setImage(, forState: .Normal)
         
         //firstSquareOutlet.setImage(nilImage, forState: .Normal)
-        
-        
+        emptyTiles()
+        youWonLabel.text = ""
     }
     
     
+    @IBAction func resetScoreButtonPressed(sender: AnyObject) {
+        
+        firstPlayerScore = 0
+        self.firstPlayerScoreLabel.text = String(firstPlayerScore)
+        secondPlayerScore = 0
+        
+        self.secondPlayerScoreLabel.text = String(secondPlayerScore)
+        
+    emptyTiles()
+        youWonLabel.text = ""
+        
+    }
     
     
 }

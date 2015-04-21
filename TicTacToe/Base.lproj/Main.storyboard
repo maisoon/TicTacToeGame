@@ -139,9 +139,11 @@
                                     <action selector="ninthSquarePressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Fjb-Sq-S0b"/>
                                 </connections>
                             </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NoU-qQ-CM3">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NoU-qQ-CM3">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="14"/>
                                 <state key="normal" title="Reset">
+                                    <color key="titleColor" red="1" green="0.50429041409999997" blue="0.56763912240000003" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
@@ -181,6 +183,41 @@
                                     <rect key="frame" x="280" y="470" width="59" height="55"/>
                                 </variation>
                             </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rightPointer.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="utq-97-ynm">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="232" y="478" width="40" height="40"/>
+                                </variation>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leftPointer.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="0RJ-pB-xfo">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="129" y="478" width="40" height="40"/>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lUU-PO-TeH">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="18"/>
+                                <state key="normal" title="Reset Score">
+                                    <color key="titleColor" red="1" green="0.51031976960000003" blue="0.498403649" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="155" y="552" width="90" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="resetScoreButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="yXE-S3-IcD"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X9U-n9-XGu">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="44"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="105" y="43" width="191" height="62"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -200,6 +237,10 @@
                                 <exclude reference="r6m-Z6-Us6"/>
                                 <exclude reference="dv4-tf-2uC"/>
                                 <exclude reference="Joj-0Y-8xa"/>
+                                <exclude reference="utq-97-ynm"/>
+                                <exclude reference="0RJ-pB-xfo"/>
+                                <exclude reference="lUU-PO-TeH"/>
+                                <exclude reference="X9U-n9-XGu"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -219,6 +260,10 @@
                                 <include reference="r6m-Z6-Us6"/>
                                 <include reference="dv4-tf-2uC"/>
                                 <include reference="Joj-0Y-8xa"/>
+                                <include reference="utq-97-ynm"/>
+                                <include reference="0RJ-pB-xfo"/>
+                                <include reference="lUU-PO-TeH"/>
+                                <include reference="X9U-n9-XGu"/>
                             </mask>
                         </variation>
                     </view>
@@ -229,14 +274,17 @@
                         <outlet property="firstPlayerScoreLabel" destination="r6m-Z6-Us6" id="S4m-4n-52f"/>
                         <outlet property="firstSquareOutlet" destination="5M5-Kn-KcJ" id="utx-If-xYF"/>
                         <outlet property="fourthSquareOutlet" destination="Dfd-qw-6nE" id="79e-Zo-ThJ"/>
+                        <outlet property="leftPointerImage" destination="0RJ-pB-xfo" id="bFs-Fa-WC2"/>
                         <outlet property="ninthSquareOutlet" destination="bKh-hx-0v2" id="svq-rR-Gde"/>
                         <outlet property="resetButtonOutlet" destination="NoU-qQ-CM3" id="IRY-Hz-Cba"/>
+                        <outlet property="rightPointerImage" destination="utq-97-ynm" id="NUu-ld-5wf"/>
                         <outlet property="secondPlayerImage" destination="Joj-0Y-8xa" id="7yK-gM-NIO"/>
                         <outlet property="secondPlayerScoreLabel" destination="yUK-Rr-Ljp" id="3r2-CL-nf3"/>
                         <outlet property="secondSquareOutlet" destination="8k7-6M-yuY" id="XgW-fd-P1s"/>
                         <outlet property="seventhSquareOutlet" destination="eb1-nB-DNF" id="hGH-0e-a5N"/>
                         <outlet property="sixthSquareOutlet" destination="EIz-tl-m1a" id="sL6-Ra-krS"/>
                         <outlet property="thirdSquareOutlet" destination="7X8-3a-V7K" id="jvK-lO-juG"/>
+                        <outlet property="youWonLabel" destination="X9U-n9-XGu" id="TeT-s9-sud"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -245,6 +293,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="leftPointer.jpeg" width="600" height="600"/>
+        <image name="rightPointer.jpg" width="600" height="600"/>
         <image name="tictactoe.png" width="900" height="900"/>
     </resources>
 </document>
