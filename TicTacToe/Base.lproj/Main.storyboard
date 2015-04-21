@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="TicTacToe" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tictactoe.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ui6-1O-rAa">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="25" y="125" width="350" height="350"/>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5M5-Kn-KcJ">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="57" y="156" width="70" height="70"/>
+                                </variation>
+                                <connections>
+                                    <action selector="firstSquarePressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="JX6-yC-HNf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8k7-6M-yuY">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="165" y="156" width="70" height="70"/>
+                                </variation>
+                                <connections>
+                                    <action selector="secondSquarePressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="1tR-rv-Ik4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7X8-3a-V7K">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="274" y="156" width="70" height="70"/>
+                                </variation>
+                                <connections>
+                                    <action selector="thirdSquarePressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Lhs-00-m5O"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dfd-qw-6nE">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="57" y="265" width="70" height="70"/>
+                                </variation>
+                                <connections>
+                                    <action selector="fourthSquarePressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="2ka-SM-qoe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dKO-kd-DxX">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="165" y="265" width="70" height="70"/>
+                                </variation>
+                                <connections>
+                                    <action selector="fifthSquarePressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="fA7-Sa-aks"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EIz-tl-m1a">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="274" y="265" width="70" height="70"/>
+                                </variation>
+                                <connections>
+                                    <action selector="sixthSquarePressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="vHW-5u-HbS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eb1-nB-DNF">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="57" y="372" width="70" height="70"/>
+                                </variation>
+                                <connections>
+                                    <action selector="seventhSquarePressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="veg-Qy-AM1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gom-hO-qif">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="165" y="372" width="70" height="70"/>
+                                </variation>
+                                <connections>
+                                    <action selector="eigthSquarePressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="DZN-Sx-Zt8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bKh-hx-0v2">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="274" y="372" width="70" height="70"/>
+                                </variation>
+                                <connections>
+                                    <action selector="ninthSquarePressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Fjb-Sq-S0b"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NoU-qQ-CM3">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Reset">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="177" y="483" width="46" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="resetButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ezH-b6-Mid"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yUK-Rr-Ljp">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="281" y="552" width="56" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r6m-Z6-Us6">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="67" y="552" width="51" height="21"/>
+                                </variation>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dv4-tf-2uC">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="63" y="470" width="58" height="55"/>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Joj-0Y-8xa">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="280" y="470" width="59" height="55"/>
+                                </variation>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Ui6-1O-rAa"/>
+                                <exclude reference="5M5-Kn-KcJ"/>
+                                <exclude reference="8k7-6M-yuY"/>
+                                <exclude reference="7X8-3a-V7K"/>
+                                <exclude reference="Dfd-qw-6nE"/>
+                                <exclude reference="dKO-kd-DxX"/>
+                                <exclude reference="EIz-tl-m1a"/>
+                                <exclude reference="eb1-nB-DNF"/>
+                                <exclude reference="Gom-hO-qif"/>
+                                <exclude reference="bKh-hx-0v2"/>
+                                <exclude reference="NoU-qQ-CM3"/>
+                                <exclude reference="yUK-Rr-Ljp"/>
+                                <exclude reference="r6m-Z6-Us6"/>
+                                <exclude reference="dv4-tf-2uC"/>
+                                <exclude reference="Joj-0Y-8xa"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Ui6-1O-rAa"/>
+                                <include reference="5M5-Kn-KcJ"/>
+                                <include reference="8k7-6M-yuY"/>
+                                <include reference="7X8-3a-V7K"/>
+                                <include reference="Dfd-qw-6nE"/>
+                                <include reference="dKO-kd-DxX"/>
+                                <include reference="EIz-tl-m1a"/>
+                                <include reference="eb1-nB-DNF"/>
+                                <include reference="Gom-hO-qif"/>
+                                <include reference="bKh-hx-0v2"/>
+                                <include reference="NoU-qQ-CM3"/>
+                                <include reference="yUK-Rr-Ljp"/>
+                                <include reference="r6m-Z6-Us6"/>
+                                <include reference="dv4-tf-2uC"/>
+                                <include reference="Joj-0Y-8xa"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="eigthSquareOutlet" destination="Gom-hO-qif" id="N7c-3L-SwB"/>
+                        <outlet property="fifthSquareOutlet" destination="dKO-kd-DxX" id="aLL-4B-QrV"/>
+                        <outlet property="firstPlayerImage" destination="dv4-tf-2uC" id="WRq-Ns-XsN"/>
+                        <outlet property="firstPlayerScoreLabel" destination="r6m-Z6-Us6" id="S4m-4n-52f"/>
+                        <outlet property="firstSquareOutlet" destination="5M5-Kn-KcJ" id="utx-If-xYF"/>
+                        <outlet property="fourthSquareOutlet" destination="Dfd-qw-6nE" id="79e-Zo-ThJ"/>
+                        <outlet property="ninthSquareOutlet" destination="bKh-hx-0v2" id="svq-rR-Gde"/>
+                        <outlet property="resetButtonOutlet" destination="NoU-qQ-CM3" id="IRY-Hz-Cba"/>
+                        <outlet property="secondPlayerImage" destination="Joj-0Y-8xa" id="7yK-gM-NIO"/>
+                        <outlet property="secondPlayerScoreLabel" destination="yUK-Rr-Ljp" id="3r2-CL-nf3"/>
+                        <outlet property="secondSquareOutlet" destination="8k7-6M-yuY" id="XgW-fd-P1s"/>
+                        <outlet property="seventhSquareOutlet" destination="eb1-nB-DNF" id="hGH-0e-a5N"/>
+                        <outlet property="sixthSquareOutlet" destination="EIz-tl-m1a" id="sL6-Ra-krS"/>
+                        <outlet property="thirdSquareOutlet" destination="7X8-3a-V7K" id="jvK-lO-juG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="379.5" y="337"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tictactoe.png" width="900" height="900"/>
+    </resources>
+</document>
