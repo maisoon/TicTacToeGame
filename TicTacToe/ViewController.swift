@@ -659,15 +659,15 @@ class ViewController: UIViewController {
     }
     func emptyTiles()
     {
-        firstSquareOutlet.setImage(whiteImage, forState: .Normal)
-        secondSquareOutlet.setImage(whiteImage, forState: .Normal)
-        thirdSquareOutlet.setImage(whiteImage, forState: .Normal)
-        fourthSquareOutlet.setImage(whiteImage, forState: .Normal)
-        fifthSquareOutlet.setImage(whiteImage, forState: .Normal)
-        sixthSquareOutlet.setImage(whiteImage, forState: .Normal)
-        seventhSquareOutlet.setImage(whiteImage, forState: .Normal)
-        eigthSquareOutlet.setImage(whiteImage, forState: .Normal)
-        ninthSquareOutlet.setImage(whiteImage, forState: .Normal)
+        firstSquareOutlet.setImage(nil, forState: .Normal)
+        secondSquareOutlet.setImage(nil, forState: .Normal)
+        thirdSquareOutlet.setImage(nil, forState: .Normal)
+        fourthSquareOutlet.setImage(nil, forState: .Normal)
+        fifthSquareOutlet.setImage(nil, forState: .Normal)
+        sixthSquareOutlet.setImage(nil, forState: .Normal)
+        seventhSquareOutlet.setImage(nil, forState: .Normal)
+        eigthSquareOutlet.setImage(nil, forState: .Normal)
+        ninthSquareOutlet.setImage(nil, forState: .Normal)
         
 
     }

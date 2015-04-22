@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		51CC70FA1AE6BE5600BAD738 /* empty.png in Resources */ = {isa = PBXBuildFile; fileRef = 51CC70F91AE6BE5600BAD738 /* empty.png */; };
 		51CC70FD1AE6CAA800BAD738 /* leftPointer.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 51CC70FB1AE6CAA800BAD738 /* leftPointer.jpeg */; };
 		51CC70FE1AE6CAA800BAD738 /* rightPointer.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 51CC70FC1AE6CAA800BAD738 /* rightPointer.jpg */; };
 		51CD48D61AE13BF20001560E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CD48D51AE13BF20001560E /* AppDelegate.swift */; };
@@ -32,7 +31,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		51CC70F91AE6BE5600BAD738 /* empty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = empty.png; sourceTree = "<group>"; };
 		51CC70FB1AE6CAA800BAD738 /* leftPointer.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = leftPointer.jpeg; sourceTree = "<group>"; };
 		51CC70FC1AE6CAA800BAD738 /* rightPointer.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rightPointer.jpg; sourceTree = "<group>"; };
 		51CD48D01AE13BF10001560E /* TicTacToe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicTacToe.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,7 +90,6 @@
 				51CD48F51AE13E880001560E /* tic-tac-toe-O.png */,
 				51CD48F61AE13E880001560E /* tic-tac-toe-X.png */,
 				51CD48F71AE13E880001560E /* tictactoe.png */,
-				51CC70F91AE6BE5600BAD738 /* empty.png */,
 				51CC70FB1AE6CAA800BAD738 /* leftPointer.jpeg */,
 				51CC70FC1AE6CAA800BAD738 /* rightPointer.jpg */,
 				51CD48D51AE13BF20001560E /* AppDelegate.swift */,
@@ -215,7 +212,6 @@
 				51CD48FA1AE13E880001560E /* tictactoe.png in Resources */,
 				51CD48DB1AE13BF20001560E /* Main.storyboard in Resources */,
 				51CD48E01AE13BF20001560E /* LaunchScreen.xib in Resources */,
-				51CC70FA1AE6BE5600BAD738 /* empty.png in Resources */,
 				51CD48F91AE13E880001560E /* tic-tac-toe-X.png in Resources */,
 				51CD48F81AE13E880001560E /* tic-tac-toe-O.png in Resources */,
 				51CD48DD1AE13BF20001560E /* Images.xcassets in Resources */,
