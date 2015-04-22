@@ -183,13 +183,13 @@
                                     <rect key="frame" x="280" y="470" width="59" height="55"/>
                                 </variation>
                             </imageView>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rightPointer.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="utq-97-ynm">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="utq-97-ynm">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="232" y="478" width="40" height="40"/>
                                 </variation>
                             </imageView>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leftPointer.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="0RJ-pB-xfo">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0RJ-pB-xfo">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="129" y="478" width="40" height="40"/>
@@ -293,8 +293,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="leftPointer.jpeg" width="600" height="600"/>
-        <image name="rightPointer.jpg" width="600" height="600"/>
         <image name="tictactoe.png" width="900" height="900"/>
     </resources>
 </document>
