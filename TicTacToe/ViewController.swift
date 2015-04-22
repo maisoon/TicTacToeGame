@@ -30,37 +30,21 @@ class ViewController: UIViewController {
     //linking IBOutlets
     
     @IBOutlet weak var firstSquareOutlet: UIButton!
-    
     @IBOutlet weak var secondSquareOutlet: UIButton!
-    
     @IBOutlet weak var thirdSquareOutlet: UIButton!
-    
     @IBOutlet weak var fourthSquareOutlet: UIButton!
-    
     @IBOutlet weak var fifthSquareOutlet: UIButton!
-    
     @IBOutlet weak var sixthSquareOutlet: UIButton!
-    
     @IBOutlet weak var seventhSquareOutlet: UIButton!
-    
     @IBOutlet weak var eigthSquareOutlet: UIButton!
-    
     @IBOutlet weak var ninthSquareOutlet: UIButton!
-    
     @IBOutlet weak var resetButtonOutlet: UIButton!
-    
     @IBOutlet weak var firstPlayerImage: UIImageView!
-    
     @IBOutlet weak var secondPlayerImage: UIImageView!
-    
     @IBOutlet weak var firstPlayerScoreLabel: UILabel!
-    
     @IBOutlet weak var secondPlayerScoreLabel: UILabel!
-    
     @IBOutlet weak var rightPointerImage: UIImageView!
-    
     @IBOutlet weak var leftPointerImage: UIImageView!
-    
     @IBOutlet weak var youWonLabel: UILabel!
     
     override func viewDidLoad() {
@@ -440,13 +424,13 @@ class ViewController: UIViewController {
         {
         var negateTurn = false
         if (turn == false)
-        {        firstSquareOutlet.setImage(xImage, forState: .Normal)
+        {        sender.setImage(xImage, forState: .Normal)
             negateTurn = true
             squareValue[0] = 1
         }
         else
         {
-        firstSquareOutlet.setImage(oImage, forState: .Normal)
+        sender.setImage(oImage, forState: .Normal)
             negateTurn = false
             squareValue[0] = 2
         }
@@ -468,13 +452,13 @@ class ViewController: UIViewController {
         if (turn == false)
         {
         negateTurn = true
-            secondSquareOutlet.setImage(xImage, forState: .Normal)
+            sender.setImage(xImage, forState: .Normal)
             squareValue[1] = 1
         }
         else
         {
         negateTurn = false
-            secondSquareOutlet.setImage(oImage, forState: .Normal)
+            sender.setImage(oImage, forState: .Normal)
             squareValue[1] = 2
         }
         
@@ -495,13 +479,13 @@ class ViewController: UIViewController {
         if (turn == false)
         {
         negateTurn = true
-            thirdSquareOutlet.setImage(xImage, forState: .Normal)
+            sender.setImage(xImage, forState: .Normal)
             squareValue[2] = 1
         }
         else
         {
         negateTurn = false
-            thirdSquareOutlet.setImage(oImage, forState: .Normal)
+            sender.setImage(oImage, forState: .Normal)
             squareValue[2] = 2
         }
         
@@ -522,13 +506,13 @@ class ViewController: UIViewController {
         if (turn == false)
         {
         negateTurn = true
-            fourthSquareOutlet.setImage(xImage, forState: .Normal)
+            sender.setImage(xImage, forState: .Normal)
             squareValue[3] = 1
         }
         else
         {
         negateTurn = false
-            fourthSquareOutlet.setImage(oImage, forState: .Normal)
+            sender.setImage(oImage, forState: .Normal)
             squareValue[3] = 2
         }
         
@@ -547,13 +531,13 @@ class ViewController: UIViewController {
         if (turn == false)
         {
         negateTurn = true
-            fifthSquareOutlet.setImage(xImage, forState: .Normal)
+            sender.setImage(xImage, forState: .Normal)
             squareValue[4] = 1
         }
         else
         {
         negateTurn = false
-            fifthSquareOutlet.setImage(oImage, forState: .Normal)
+            sender.setImage(oImage, forState: .Normal)
             squareValue[4] = 2
         }
         
@@ -571,13 +555,13 @@ class ViewController: UIViewController {
         if (turn == false)
         {
         negateTurn = true
-            sixthSquareOutlet.setImage(xImage, forState: .Normal)
+            sender.setImage(xImage, forState: .Normal)
             squareValue[5] = 1
         }
         else
         {
         negateTurn = false
-            sixthSquareOutlet.setImage(oImage, forState: .Normal)
+            sender.setImage(oImage, forState: .Normal)
             squareValue[5] = 2
         }
         
@@ -596,13 +580,13 @@ class ViewController: UIViewController {
         if(turn == false)
         {
         negateTurn = true
-            seventhSquareOutlet.setImage(xImage, forState: .Normal)
+            sender.setImage(xImage, forState: .Normal)
             squareValue[6] = 1
         }
         else
         {
         negateTurn = false
-            seventhSquareOutlet.setImage(oImage, forState: .Normal)
+            sender.setImage(oImage, forState: .Normal)
             squareValue[6] = 2
         }
         
@@ -620,13 +604,13 @@ class ViewController: UIViewController {
         if (turn == false)
         {
         negateTurn = true
-            eigthSquareOutlet.setImage(xImage, forState: .Normal)
+            sender.setImage(xImage, forState: .Normal)
             squareValue[7] = 1
         }
         else
         {
         negateTurn = false
-            eigthSquareOutlet.setImage(oImage, forState: .Normal)
+            sender.setImage(oImage, forState: .Normal)
             squareValue[7] = 2
         }
         
@@ -643,13 +627,13 @@ class ViewController: UIViewController {
         if (turn == false)
         {
         negateTurn = true
-            ninthSquareOutlet.setImage(xImage, forState: .Normal)
+            sender.setImage(xImage, forState: .Normal)
             squareValue[8] = 1
         }
         else
         {
         negateTurn = false
-            ninthSquareOutlet.setImage(oImage, forState: .Normal)
+            sender.setImage(oImage, forState: .Normal)
             squareValue[8] = 2
         }
         turn = negateTurn
