@@ -23,26 +23,11 @@ class ViewController: UIViewController {
     var firstPlayerScore:Int = 0
     var secondPlayerScore:Int = 0
     
+    var squareIsFull: [Bool] = [false,false,false,false,false,false,false,false,false]
     
-    var firstIsFull = false
-    var secondIsFull = false
-    var thirdIsFull = false
-    var fourthIsFull = false
-    var fifthIsFull = false
-    var sixthIsFull = false
-    var seventhIsFull = false
-    var eighthIsFull = false
-    var ninthIsFull = false
+    var squareValue: [Int] = [0,0,0,0,0,0,0,0,0]
     
-    var firstValue:Int = 0
-    var secondValue:Int = 0
-    var thirdValue:Int = 0
-    var fourthValue:Int = 0
-    var fifthValue:Int = 0
-    var sixthValue:Int = 0
-    var seventhValue:Int = 0
-    var eighthValue:Int = 0
-    var ninthValue:Int = 0
+    //linking IBOutlets
     
     @IBOutlet weak var firstSquareOutlet: UIButton!
     
@@ -113,48 +98,26 @@ class ViewController: UIViewController {
     
     func resetingTiles()
     {
-        firstIsFull = false
-        secondIsFull = false
-        thirdIsFull = false
-        fourthIsFull = false
-        fifthIsFull = false
-        sixthIsFull = false
-        seventhIsFull = false
-        eighthIsFull = false
-        ninthIsFull = false
-        
-        firstValue = 0
-        secondValue = 0
-        thirdValue = 0
-        fourthValue = 0
-        fifthValue = 0
-        sixthValue = 0
-        seventhValue = 0
-        eighthValue = 0
-        ninthValue = 0
-        
-    
-        
+        for index in 0 ... 8
+        {
+        squareIsFull[index] = false
+        squareValue[index] = 0
+        }
         
     }
     
     func stopGame()
     {
-        firstIsFull = true
-        secondIsFull = true
-        thirdIsFull = true
-        fourthIsFull = true
-        fifthIsFull = true
-        sixthIsFull = true
-        seventhIsFull = true
-        eighthIsFull = true
-        ninthIsFull = true
+        for index in 0 ... 8
+        {
+        squareIsFull[index] = true
+        }
+   
         
         firstPlayerScoreLabel.text = String(firstPlayerScore)
         secondPlayerScoreLabel.text = String(secondPlayerScore)
     
-    //resetingTiles(); resetingTiles will reverse the upper functionality
-        //it caused a logical error!
+  
     }
     
     
@@ -163,60 +126,45 @@ class ViewController: UIViewController {
         
         var someoneWon = 0
     //first row all X
-        if (firstValue == 1 && secondValue == 1 && thirdValue == 1)
+        if (squareValue[0] == 1 && squareValue[1] == 1 && squareValue[2] == 1)
         {
-        firstPlayerScore += 1
+            firstPlayerScore += 1
             resetButtonOutlet.hidden = false
             
-            //show alert notifying X won
-            
-            
-            //here we will update the label of the first player on the screen
+           
             //stop the game
             stopGame()
             
             //change the turn to the component
             turn = true
             someoneWon = 1
-           
+            
             youWonLabel.text = "X Won"
             
-          
+            
         }
-        
-    //first row all O
-        if (firstValue == 2 && secondValue == 2 && thirdValue == 2)
+       
+        //first row all O
+        if (squareValue[0] == 2 && squareValue[1] == 2 && squareValue[2] == 2)
         {
             secondPlayerScore += 1
             resetButtonOutlet.hidden = false
-            
-            //show alert notifying X won
-            
-            
-            
-            //here we will update the label of the second player on the screen
-            
+           
             
             //stop the game
             stopGame()
             //change the turn to the component
             turn = false
             someoneWon = 1
-             youWonLabel.text = "O Won"
+            youWonLabel.text = "O Won"
             
         }
-    //second row all X
-        if (fourthValue == 1 && fifthValue == 1 && sixthValue == 1)
+        
+        //second row all X
+        if (squareValue[3] == 1 && squareValue[4] == 1 && squareValue[5] == 1)
         {
             firstPlayerScore += 1
             resetButtonOutlet.hidden = false
-            
-            
-            //show alert notifying X won
-            
-          
-            
-            //here we will update the label of the first player on the screen
             
             //stop the game
             stopGame()
@@ -228,20 +176,15 @@ class ViewController: UIViewController {
             
             youWonLabel.text = "X Won"
 
-            
         }
+        
+        
         //second row all 0
-        if (fourthValue == 2 && fifthValue == 2 && sixthValue == 2)
+        if (squareValue[3] == 2 && squareValue[4] == 2 && squareValue[5] == 2)
         {
             secondPlayerScore += 1
             resetButtonOutlet.hidden = false
             
-            
-            //show alert notifying X won
-            
-          
-            
-            //here we will update the label of the first player on the screen
             //stop the game
             stopGame()
             
@@ -249,21 +192,16 @@ class ViewController: UIViewController {
             turn = false
             someoneWon = 1
             youWonLabel.text = "O Won"
-            
         }
+        
+        
         
         //third row all X
-        if (seventhValue == 1 && eighthValue == 1 && ninthValue == 1)
+        if (squareValue[6] == 1 && squareValue[7] == 1 && squareValue[8] == 1)
         {
             firstPlayerScore += 1
             resetButtonOutlet.hidden = false
             
-            
-            //show alert notifying X won
-            
-            
-            
-            //here we will update the label of the first player on the screen
             
             //stop the game
             stopGame()
@@ -276,19 +214,13 @@ class ViewController: UIViewController {
             
             youWonLabel.text = "X Won"
 
-            
         }
+        
         //third row all O
-        if (seventhValue == 2 && eighthValue == 2 && ninthValue == 2)
+        if (squareValue[6] == 2 && squareValue[7] == 2 && squareValue[8] == 2)
         {
             secondPlayerScore += 1
             resetButtonOutlet.hidden = false
-            
-            //show alert notifying X won
-         
-            
-            
-            //here we will update the label of the first player on the screen
             
             //stop the game
             stopGame()
@@ -298,22 +230,14 @@ class ViewController: UIViewController {
             turn = false
             someoneWon = 1
             youWonLabel.text = "O Won"
-            
         }
         
         //first column all X
-        if (firstValue == 1 && fourthValue == 1 && seventhValue == 1)
-        {
+         if (squareValue[0] == 1 && squareValue[3] == 1 && squareValue[6] == 1)
+         {
             firstPlayerScore += 1
             resetButtonOutlet.hidden = false
-            
-            
-            //show alert notifying X won
-            
           
-            
-            //here we will update the label of the first player on the screen
-            
             //stop the game
             stopGame()
             
@@ -324,20 +248,15 @@ class ViewController: UIViewController {
             
             
             youWonLabel.text = "X Won"
-
-            
         }
-
+        
+        
         //first column all O
-        if (firstValue == 2 && fourthValue == 2 && seventhValue == 2)
+        
+        if (squareValue[0] == 2 && squareValue[3] == 2 && squareValue[6] == 2)
         {
             secondPlayerScore += 1
             resetButtonOutlet.hidden = false
-            
-            //show alert notifying X won
-            
-            
-            //here we will update the label of the first player on the screen
             
             //stop the game
             stopGame()
@@ -347,138 +266,109 @@ class ViewController: UIViewController {
             turn = false
             someoneWon = 1
             youWonLabel.text = "O Won"
-            
         }
+        
         
         //second column all X
-        if (secondValue == 1 && fifthValue == 1 && eighthValue == 1)
-        {
-            firstPlayerScore += 1
-            resetButtonOutlet.hidden = false
-            
-            
-            //show alert notifying X won
-            
-            
-            
-            //here we will update the label of the first player on the screen
-            
-            //stop the game
-            stopGame()
-            
-            
-            //change the turn to the component
-            turn = true
-            someoneWon = 1
-          
-            
-            youWonLabel.text = "X Won"
-
-            
-        }
-        //second column all O
-        if (secondValue == 2 && fifthValue == 2 && eighthValue == 2)
-        {
-            secondPlayerScore += 1
-            resetButtonOutlet.hidden = false
-            
-            //show alert notifying X won
-            
-            
-            //here we will update the label of the first player on the screen
-            
-            //stop the game
-            stopGame()
-            
-            
-            //change the turn to the component
-            turn = false
-            someoneWon = 1
-          youWonLabel.text = "O Won"
-            
-        }
-    //third column all X
-        if (thirdValue == 1 && sixthValue == 1 && ninthValue == 1)
-        {
-            firstPlayerScore += 1
-            resetButtonOutlet.hidden = false
-            
-            
-            //show alert notifying X won
-            
-            
-            //here we will update the label of the first player on the screen
-            
-            //stop the game
-            stopGame()
-            
-            
-            //change the turn to the component
-            turn = true
-            someoneWon = 1
-         
-            
-            youWonLabel.text = "X Won"
-
-        }
-        //third column all O
-        if (thirdValue == 2 && sixthValue == 2 && ninthValue == 2)
-        {
-            secondPlayerScore += 1
-            resetButtonOutlet.hidden = false
-            
-            
-            //show alert notifying X won
-            
-            
-            
-            //here we will update the label of the first player on the screen
-            
-            //stop the game
-            stopGame()
-            
-            
-            //change the turn to the component
-            turn = false
-            someoneWon = 1
-            youWonLabel.text = "O Won"
-            
-        }
-
-        //backward slash all X
-        if (firstValue == 1 && fifthValue == 1 && ninthValue == 1)
-        {
-            firstPlayerScore += 1
-            resetButtonOutlet.hidden = false
-            
-            //show alert notifying X won
-            
-            
-            //here we will update the label of the first player on the screen
-            
-            //stop the game
-            stopGame()
-            
-            
-            //change the turn to the component
-            turn = true
-            someoneWon = 1
         
+        if (squareValue[1] == 1 && squareValue[4] == 1 && squareValue[7] == 1)
+        {
+            firstPlayerScore += 1
+            resetButtonOutlet.hidden = false
+            
+            //stop the game
+            stopGame()
+            
+            
+            //change the turn to the component
+            turn = true
+            someoneWon = 1
+            
             
             youWonLabel.text = "X Won"
 
         }
-        //backward slash all O
-        if (firstValue == 2 && fifthValue == 2 && ninthValue == 2)
+        
+        //second column all O
+        
+        if (squareValue[1] == 2 && squareValue[4] == 2 && squareValue[7] == 2)
         {
             secondPlayerScore += 1
             resetButtonOutlet.hidden = false
             
-            //show alert notifying X won
-           
-           
+            //stop the game
+            stopGame()
             
-            //here we will update the label of the first player on the screen
+            
+            //change the turn to the component
+            turn = false
+            someoneWon = 1
+            youWonLabel.text = "O Won"
+
+        
+        }
+       
+        //third column all X
+        if (squareValue[2] == 1 && squareValue[5] == 1 && squareValue[8] == 1)
+        {
+            firstPlayerScore += 1
+            resetButtonOutlet.hidden = false
+        
+            //stop the game
+            stopGame()
+            
+            
+            //change the turn to the component
+            turn = true
+            someoneWon = 1
+            
+            
+            youWonLabel.text = "X Won"
+        }
+        
+        //third column all O
+         if (squareValue[2] == 2 && squareValue[5] == 2 && squareValue[8] == 2)
+         {
+            secondPlayerScore += 1
+            resetButtonOutlet.hidden = false
+            
+            //stop the game
+            stopGame()
+            
+            
+            //change the turn to the component
+            turn = false
+            someoneWon = 1
+            youWonLabel.text = "O Won"
+
+        }
+        
+        //backward slash all X
+        
+        if (squareValue[0] == 1 && squareValue[4] == 1 && squareValue[8] == 1)
+        {
+            firstPlayerScore += 1
+            resetButtonOutlet.hidden = false
+           
+            //stop the game
+            stopGame()
+            
+            
+            //change the turn to the component
+            turn = true
+            someoneWon = 1
+            
+            
+            youWonLabel.text = "X Won"
+
+        }
+        
+        //backward slash all O
+        if (squareValue[0] == 2 && squareValue[4] == 2 && squareValue[8] == 2)
+        {
+            secondPlayerScore += 1
+            resetButtonOutlet.hidden = false
+
             
             //stop the game
             stopGame()
@@ -486,22 +376,15 @@ class ViewController: UIViewController {
             //change the turn to the component
             turn = false
             someoneWon = 1
-          youWonLabel.text = "O Won"
-            
-        }
+            youWonLabel.text = "O Won"
 
+        }
+       
         //forward slash all X
-        if (thirdValue == 1 && fifthValue == 1 && seventhValue == 1)
+        if (squareValue[2] == 1 && squareValue[4] == 1 && squareValue[6] == 1)
         {
             firstPlayerScore += 1
             resetButtonOutlet.hidden = false
-            
-            
-            //show alert notifying X won
-            
-       
-            
-            //here we will update the label of the first player on the screen
             
             //stop the game
             stopGame()
@@ -512,18 +395,13 @@ class ViewController: UIViewController {
             
             youWonLabel.text = "X Won"
 
-            
         }
+        
         //forward slash all O
-        if (thirdValue == 2 && fifthValue == 2 && seventhValue == 2)
+        if (squareValue[2] == 2 && squareValue[4] == 2 && squareValue[6] == 2)
         {
             secondPlayerScore += 1
             resetButtonOutlet.hidden = false
-            
-            //show alert notifying X won
-            
-            
-            //here we will update the label of the first player on the screen
             
             //stop the game
             stopGame()
@@ -531,32 +409,25 @@ class ViewController: UIViewController {
             //change the turn to the component
             turn = false
             someoneWon = 1
-          
+            
             
             youWonLabel.text = "O Won"
-
-        }
-
-        if(firstIsFull == true && secondIsFull == true && thirdIsFull == true && fourthIsFull == true && fifthIsFull == true && sixthIsFull == true && seventhIsFull == true && eighthIsFull == true && ninthIsFull == true && someoneWon == 0)
+            
+}
+        
+        
+        if(squareIsFull[0] == true && squareIsFull[1] == true && squareIsFull[2] == true && squareIsFull[3] == true && squareIsFull[4] == true && squareIsFull[5] == true && squareIsFull[6] == true && squareIsFull[7] == true && squareIsFull[8] == true && someoneWon == 0)
         {
             //if tie occur
             resetButtonOutlet.hidden = false
-            
-            //show alert no one won
-            
-         
-            
-            
-            //here we will update the label of the first player on the screen
-            
+           
             //stop the game
             stopGame()
             
             //change the turn to the component
             turn = false
-
-            
         }
+
         changePointer()
         
 
@@ -565,24 +436,24 @@ class ViewController: UIViewController {
 
     @IBAction func firstSquarePressed(sender: AnyObject) {
         
-        if (firstIsFull == false)
+        if (squareIsFull[0] == false)
         {
         var negateTurn = false
         if (turn == false)
         {        firstSquareOutlet.setImage(xImage, forState: .Normal)
             negateTurn = true
-            firstValue = 1
+            squareValue[0] = 1
         }
         else
         {
         firstSquareOutlet.setImage(oImage, forState: .Normal)
             negateTurn = false
-            firstValue = 2
+            squareValue[0] = 2
         }
         
         turn = negateTurn
         
-        firstIsFull = true
+        squareIsFull[0] = true
             
             calculateWinner()
          
@@ -591,24 +462,24 @@ class ViewController: UIViewController {
     
     @IBAction func secondSquarePressed(sender: AnyObject) {
         
-        if (secondIsFull == false)
+        if (squareIsFull[1] == false)
         {
         var negateTurn = false
         if (turn == false)
         {
         negateTurn = true
             secondSquareOutlet.setImage(xImage, forState: .Normal)
-            secondValue = 1
+            squareValue[1] = 1
         }
         else
         {
         negateTurn = false
             secondSquareOutlet.setImage(oImage, forState: .Normal)
-            secondValue = 2
+            squareValue[1] = 2
         }
         
         turn = negateTurn
-    secondIsFull = true
+    squareIsFull[1] = true
             calculateWinner()
             
             
@@ -617,7 +488,7 @@ class ViewController: UIViewController {
     
     @IBAction func thirdSquarePressed(sender: AnyObject) {
         
-        if (thirdIsFull == false)
+        if (squareIsFull[2] == false)
         {
         var negateTurn = false
         
@@ -625,17 +496,17 @@ class ViewController: UIViewController {
         {
         negateTurn = true
             thirdSquareOutlet.setImage(xImage, forState: .Normal)
-            thirdValue = 1
+            squareValue[2] = 1
         }
         else
         {
         negateTurn = false
             thirdSquareOutlet.setImage(oImage, forState: .Normal)
-            thirdValue = 2
+            squareValue[2] = 2
         }
         
         turn = negateTurn
-        thirdIsFull = true
+        squareIsFull[2] = true
             calculateWinner()
             
     
@@ -644,7 +515,7 @@ class ViewController: UIViewController {
     
     @IBAction func fourthSquarePressed(sender: AnyObject) {
         
-        if (fourthIsFull == false)
+        if (squareIsFull[3] == false)
         {
         var negateTurn = false
         
@@ -652,24 +523,24 @@ class ViewController: UIViewController {
         {
         negateTurn = true
             fourthSquareOutlet.setImage(xImage, forState: .Normal)
-            fourthValue = 1
+            squareValue[3] = 1
         }
         else
         {
         negateTurn = false
             fourthSquareOutlet.setImage(oImage, forState: .Normal)
-            fourthValue = 2
+            squareValue[3] = 2
         }
         
         turn = negateTurn
-    fourthIsFull = true
+    squareIsFull[3] = true
             calculateWinner()
         }
     }
 
     @IBAction func fifthSquarePressed(sender: AnyObject) {
         
-        if (fifthIsFull == false)
+        if (squareIsFull[4] == false)
         {
     var negateTurn = false
         
@@ -677,23 +548,23 @@ class ViewController: UIViewController {
         {
         negateTurn = true
             fifthSquareOutlet.setImage(xImage, forState: .Normal)
-            fifthValue = 1
+            squareValue[4] = 1
         }
         else
         {
         negateTurn = false
             fifthSquareOutlet.setImage(oImage, forState: .Normal)
-            fifthValue = 2
+            squareValue[4] = 2
         }
         
         turn = negateTurn
-        fifthIsFull = true
+        squareIsFull[4] = true
             calculateWinner()
         }
     }
     
     @IBAction func sixthSquarePressed(sender: AnyObject) {
-        if (sixthIsFull == false)
+        if (squareIsFull[5] == false)
         {
         var negateTurn = false
         
@@ -701,24 +572,24 @@ class ViewController: UIViewController {
         {
         negateTurn = true
             sixthSquareOutlet.setImage(xImage, forState: .Normal)
-            sixthValue = 1
+            squareValue[5] = 1
         }
         else
         {
         negateTurn = false
             sixthSquareOutlet.setImage(oImage, forState: .Normal)
-            sixthValue = 2
+            squareValue[5] = 2
         }
         
         turn = negateTurn
-    sixthIsFull = true
+    squareIsFull[5] = true
             calculateWinner()
         }
     }
     
     @IBAction func seventhSquarePressed(sender: AnyObject) {
         
-        if (seventhIsFull == false)
+        if (squareIsFull[6] == false)
         {
         var negateTurn = false
         
@@ -726,63 +597,63 @@ class ViewController: UIViewController {
         {
         negateTurn = true
             seventhSquareOutlet.setImage(xImage, forState: .Normal)
-            seventhValue = 1
+            squareValue[6] = 1
         }
         else
         {
         negateTurn = false
             seventhSquareOutlet.setImage(oImage, forState: .Normal)
-            seventhValue = 2
+            squareValue[6] = 2
         }
         
         turn = negateTurn
-        seventhIsFull = true
+        squareIsFull[6] = true
             calculateWinner()
         }
     }
     
     @IBAction func eigthSquarePressed(sender: AnyObject) {
         
-        if (eighthIsFull == false)
+        if (squareIsFull[7] == false)
         {
         var negateTurn = false
         if (turn == false)
         {
         negateTurn = true
             eigthSquareOutlet.setImage(xImage, forState: .Normal)
-            eighthValue = 1
+            squareValue[7] = 1
         }
         else
         {
         negateTurn = false
             eigthSquareOutlet.setImage(oImage, forState: .Normal)
-            eighthValue = 2
+            squareValue[7] = 2
         }
         
         turn = negateTurn
-        eighthIsFull = true
+        squareIsFull[7] = true
             calculateWinner()
         }
     }
     
     @IBAction func ninthSquarePressed(sender: AnyObject) {
-        if (ninthIsFull == false)
+        if (squareIsFull[8] == false)
         {
     var negateTurn = false
         if (turn == false)
         {
         negateTurn = true
             ninthSquareOutlet.setImage(xImage, forState: .Normal)
-            ninthValue = 1
+            squareValue[8] = 1
         }
         else
         {
         negateTurn = false
             ninthSquareOutlet.setImage(oImage, forState: .Normal)
-            ninthValue = 2
+            squareValue[8] = 2
         }
         turn = negateTurn
-        ninthIsFull = true
+        squareIsFull[8] = true
             calculateWinner()
         }
     }
@@ -803,9 +674,7 @@ class ViewController: UIViewController {
     @IBAction func resetButtonPressed(sender: AnyObject) {
         resetingTiles()
         resetButtonOutlet.hidden = true
-       // firstSquareOutlet.setImage(, forState: .Normal)
-        
-        //firstSquareOutlet.setImage(nilImage, forState: .Normal)
+    
         emptyTiles()
         youWonLabel.text = ""
     }
@@ -820,7 +689,9 @@ class ViewController: UIViewController {
         self.secondPlayerScoreLabel.text = String(secondPlayerScore)
         
     emptyTiles()
+        resetingTiles()
         youWonLabel.text = ""
+        resetButtonOutlet.hidden = true
         
     }
     
